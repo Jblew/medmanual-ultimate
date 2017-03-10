@@ -1,6 +1,6 @@
 package pl.jblew.mm.priony;
 
-import pl.jblew.mm.patogeny.Patogen;
+import pl.jblew.mm.typy.Patogen;
 
 public class Prion extends Patogen {
 

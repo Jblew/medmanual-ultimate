@@ -3,7 +3,7 @@ package pl.jblew.mm;
 import junit.framework.Test;
 import junit.framework.TestCase;
 import junit.framework.TestSuite;
-import pl.jblew.mm.dist.Image;
+import pl.jblew.mm.adnotacje.Image;
 
 /**
  * Unit test for simple App.

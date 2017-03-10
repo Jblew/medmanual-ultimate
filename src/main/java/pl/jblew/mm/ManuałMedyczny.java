@@ -1,6 +1,6 @@
 package pl.jblew.mm;
 
-import pl.jblew.mm.dist.Image;
+import pl.jblew.mm.adnotacje.Image;
 
 public class ManuałMedyczny {
 	

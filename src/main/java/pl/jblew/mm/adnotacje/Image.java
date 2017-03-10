@@ -1,4 +1,4 @@
-package pl.jblew.mm.dist;
+package pl.jblew.mm.adnotacje;
 
 import static java.lang.annotation.ElementType.ANNOTATION_TYPE;
 import static java.lang.annotation.ElementType.CONSTRUCTOR;
