@@ -1,5 +1,7 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
+import pl.jblew.mm.adnotacje.Image;
+
 public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnościEnzymu {
 	private static AktywnośćDehydrogenazyMleczanowej instance;
 
@@ -18,4 +20,15 @@ public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnośc
 		return null;
 	}
 
+	@Image(url="ldh.jpg") /*
+	
+	
+
+	
+	
+	
+	*/
+	public String reakcja() {
+		return "LDH katalizuje reakcję utleniania kwasu mlekowego i przekształcania do pirogronianu.";
+	}
 }
