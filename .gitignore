@@ -1,0 +1,6 @@
+target/
+bin/
+*.jpg
+*.jpeg
+*.png
+*.pdf
