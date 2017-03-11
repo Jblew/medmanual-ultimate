@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii;
+package pl.jblew.mm.badania.krwi;
 
 import pl.jblew.mm.adnotacje.Image;
 

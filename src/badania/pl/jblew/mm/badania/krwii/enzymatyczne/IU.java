@@ -2,7 +2,7 @@ package pl.jblew.mm.badania.krwii.enzymatyczne;
 
 import pl.jblew.mm.adnotacje.Comment;
 import pl.jblew.mm.typy.Jednostka;
-import pl.jblew.mm.typy.JednostkaSI;
+import pl.jblew.mm.typy.jednostki.JednostkaSI;
 
 @Comment(text="Jest to liczba mikromoli substratu przetworzonych prze enzym w ciągu minuty. Zależy od metody badania!")
 public class IU extends Jednostka {

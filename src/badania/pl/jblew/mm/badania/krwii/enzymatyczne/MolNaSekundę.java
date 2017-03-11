@@ -1,7 +1,7 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
 import pl.jblew.mm.typy.Jednostka;
-import pl.jblew.mm.typy.JednostkaSI;
+import pl.jblew.mm.typy.jednostki.JednostkaSI;
 
 public class MolNaSekundę extends JednostkaSI {
 	public static final MolNaSekundę I = new MolNaSekundę();

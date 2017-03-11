@@ -1,15 +1,21 @@
 package pl.jblew.mm;
 
-import pl.jblew.mm.bakterie.gujemne.krętki.BorreliaSpp;
+import java.io.File;
+import java.io.IOException;
+
+import pl.jblew.mm.generator.DocGenerator;
 
 /**
- * Hello world!
+ * Autor: Jędrzej Lewandowski
  *
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World! "+BorreliaSpp.BorreliaBurgdorferi.class.getName() );
-    }
+public class App {
+	public static void main(String[] args) throws IOException {
+		if (args.length > 1) {
+			String cmd = args[1];
+			if (cmd.equals("generate")) {
+				new DocGenerator("doc", new File("target/generated/sources/"), App.class).generate();
+			}
+		}
+	}
 }
