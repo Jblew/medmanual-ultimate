@@ -99,6 +99,8 @@
 	<classpathentry kind="src" path="src/choroby/gastroenterologiczne"/>
 	<classpathentry kind="src" path="src/choroby/nefrologiczne"/>
 	<classpathentry kind="src" path="src/choroby/zakaźne"/>
+	<classpathentry kind="src" path="src/choroby/hemodynamiczne"/>
+	<classpathentry kind="src" path="src/choroby/biochemiczne"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

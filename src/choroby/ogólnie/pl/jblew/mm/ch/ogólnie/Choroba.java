@@ -1,6 +1,9 @@
 package pl.jblew.mm.ch.ogólnie;
 
+import static pl.jblew.mm.dist.StaticUtils.array;
+
 import pl.jblew.mm.dist.BłądMerytoryczny;
+import pl.jblew.mm.dist.NotImplementedYetException;
 import pl.jblew.mm.typy.Stan;
 
 public class Choroba extends Stan {
@@ -14,5 +17,26 @@ public class Choroba extends Stan {
 			return this;
 		} else
 			throw new BłądMerytoryczny("Ta choroba nie implementuje interfejsu ChorobaNowotworowa !");
+	}
+
+	@Override
+	public String definicja() {
+		throw new NotImplementedYetException();
+	}
+
+	public String epidemiologia() {
+		throw new NotImplementedYetException();
+	}
+
+	public Stan[] przyczyny() {
+		throw new NotImplementedYetException();
+	}
+
+	public Stan[] skutki() {
+		throw new NotImplementedYetException();
+	}
+
+	public Stan[] komponenty() {
+		return array();
 	}
 }
