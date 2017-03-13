@@ -1,10 +1,10 @@
-package pl.jblew.mm.ch.hemodynamiczne.krzepnięcie;
+package pl.jblew.mm.ch.krwi.krzepnięcia;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.adnotacje.Comment;
 import pl.jblew.mm.ch.hemodynamiczne.Zastój;
-import pl.jblew.mm.ch.hemodynamiczne.krzepnięcie.nadkrzepliwość.Nadkrzepliwość;
+import pl.jblew.mm.ch.krwi.krzepnięcia.nadkrzepliwość.Nadkrzepliwość;
 import pl.jblew.mm.ch.ogólnie.Choroba;
 import pl.jblew.mm.typy.Stan;
 

@@ -109,6 +109,7 @@
 								<source>src/choroby/hemodynamiczne</source>
 								<source>src/choroby/zakaźne</source>
 								<source>src/choroby/ppokarmowego</source>
+								<source>src/choroby/naczyń</source>
 							</sources>
 						</configuration>
 					</execution>

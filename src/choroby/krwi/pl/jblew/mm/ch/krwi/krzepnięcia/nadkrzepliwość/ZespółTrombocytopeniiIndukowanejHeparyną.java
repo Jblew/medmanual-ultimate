@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.hemodynamiczne.krzepnięcie.nadkrzepliwość;
+package pl.jblew.mm.ch.krwi.krzepnięcia.nadkrzepliwość;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
