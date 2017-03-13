@@ -13,6 +13,7 @@ public class NadwrażliwośćTypu2ZależnaOdPrzeciwciał extends Nadwrażliwoś�
 
 	@Override
 	public String definicja() {
-		return "";
+		return "Nadwrażliwość typu 2 jest spowodowana bezpośrednim działaniem przeciwciał"
+				+ " na komórki docelowe lub inne składowe tkanek.";
 	}
 }

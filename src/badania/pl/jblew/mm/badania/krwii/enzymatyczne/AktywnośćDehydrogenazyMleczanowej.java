@@ -5,10 +5,10 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.adnotacje.Image;
 import pl.jblew.mm.badania.WartośćReferencyjna;
-import pl.jblew.mm.ch.hematologiczne.niedokrwistości.NiedokrwistośćHemolityczna;
-import pl.jblew.mm.ch.hematologiczne.niedokrwistości.NiedokrwistośćMegaloblastyczna;
 import pl.jblew.mm.ch.hepatologiczne.ChorobaWątroby;
 import pl.jblew.mm.ch.kardiologiczne.ZawałMięśniaSercowego;
+import pl.jblew.mm.ch.krwi.niedokrwistości.NiedokrwistośćHemolityczna;
+import pl.jblew.mm.ch.krwi.niedokrwistości.NiedokrwistośćMegaloblastyczna;
 import pl.jblew.mm.ch.mięśni.ChorobaMięśniPoprzeczniePrążkowanych;
 import pl.jblew.mm.ch.ogólnie.ChorobaNowotworowa;
 import pl.jblew.mm.stany.fizjologiczne.Noworodek;

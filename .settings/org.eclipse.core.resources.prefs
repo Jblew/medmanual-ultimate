@@ -1,9 +1,9 @@
 eclipse.preferences.version=1
 encoding//src/badania=UTF-8
-encoding//src/choroby/dermatologiczne=UTF-8
 encoding//src/choroby/endokrynologiczne=UTF-8
 encoding//src/choroby/immunologiczne=UTF-8
 encoding//src/choroby/neurologiczne=UTF-8
+encoding//src/choroby/sk\u00F3ry=UTF-8
 encoding//src/leki=UTF-8
 encoding//src/main/java=UTF-8
 encoding//src/patogeny/bakterie=UTF-8

@@ -3,6 +3,7 @@ package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu4;
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
+import pl.jblew.mm.bakterie.gdodatnie.tlenowe.mycobacterium.Gruźlica;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.Nadwrażliwość;
 import pl.jblew.mm.typy.Stan;
 
