@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.immunologiczne.nadwrażliwość;
+package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 

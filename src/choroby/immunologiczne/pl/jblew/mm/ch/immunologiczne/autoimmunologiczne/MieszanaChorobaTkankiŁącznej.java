@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.immunologiczne.nadwrażliwość;
+package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne;
 
 import pl.jblew.mm.adnotacje.*;
 import pl.jblew.mm.dist.*;
