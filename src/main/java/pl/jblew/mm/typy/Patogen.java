@@ -1,5 +1,5 @@
 package pl.jblew.mm.typy;
 
-public abstract class Patogen {
+public abstract class Patogen extends Stan {
 
 }

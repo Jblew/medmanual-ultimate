@@ -1,6 +1,8 @@
-package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne;
+package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu3;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
+
+import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.Nadwrażliwość;
 
 public class NadwrażliwośćTypu3KompleksówImmunologicznych extends Nadwrażliwość {
 	public static final NadwrażliwośćTypu3KompleksówImmunologicznych NadwrażliwośćTypu3KompleksówImmunologicznych = new NadwrażliwośćTypu3KompleksówImmunologicznych();

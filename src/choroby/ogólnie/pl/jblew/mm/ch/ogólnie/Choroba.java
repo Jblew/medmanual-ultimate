@@ -36,7 +36,11 @@ public class Choroba extends Stan {
 		throw new NotImplementedYetException();
 	}
 
-	public Stan[] komponenty() {
+	public Stan[] maKomponenty() {
+		return array();
+	}
+
+	public Stan[] jestKomponentąDla() {
 		return array();
 	}
 }
