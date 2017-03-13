@@ -37,4 +37,7 @@ public class StaticUtils {
 	public static String link(Object o) {
 		return o.getClass().toString();
 	}
+
+	public static void _constructor() {
+	}
 }

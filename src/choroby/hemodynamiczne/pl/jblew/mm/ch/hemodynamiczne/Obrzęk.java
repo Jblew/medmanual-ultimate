@@ -7,4 +7,9 @@ public class Obrzęk extends Choroba {
 
 	protected Obrzęk() {
 	}
+
+	@Override
+	public String definicja() {
+		return "Gromadzenie płynu śródmiąższowego w tkankach";
+	}
 }

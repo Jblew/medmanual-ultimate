@@ -5,4 +5,9 @@ public class ZatorowośćPłucna extends Zatorowość {
 
 	protected ZatorowośćPłucna() {
 	}
+
+	@Override
+	public String definicja() {
+		return "Zamknięcie lub zwężenie tętnicy płucnej bądź jej rozgałęzień przez materiał zatorowy.";
+	}
 }

@@ -10,7 +10,9 @@ public class Wstrząs extends Choroba {
 
 	@Override
 	public String definicja() {
-		return "Gromadzenie płynu śródmiąższowego w tkankach";
+		return "Wstrząs to stan uogólnionego krytycznego upośledzenia perfuzji tkanek "
+				+ "spowodowany zmniejszeniem rzutu serca lub objętości krwi krążącej (w stosunku do "
+				+ "objętości łożyska naczyniowego).";
 	}
 
 }
