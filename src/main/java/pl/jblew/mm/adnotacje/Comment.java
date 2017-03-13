@@ -16,10 +16,13 @@ import java.lang.annotation.Documented;
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;
 
+import pl.jblew.mm.generator.GeneratorSkip;
+
 @Documented
 @Retention(RUNTIME)
 @Target({ TYPE, FIELD, METHOD, PARAMETER, CONSTRUCTOR, LOCAL_VARIABLE, ANNOTATION_TYPE, PACKAGE, TYPE_PARAMETER,
 		TYPE_USE })
+@GeneratorSkip
 public @interface Comment {
 	public String text();
 }

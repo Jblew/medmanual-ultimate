@@ -35,7 +35,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>pl.jblew.marinesmud.dj.App</mainClass>
+							<mainClass>pl.jblew.mm.App</mainClass>
 						</manifest>
 					</archive>
 					<descriptorRefs>
@@ -50,6 +50,17 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>pl.jblew.mm.App</mainClass>
+						</manifest>
+					</archive>
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -75,6 +86,7 @@
 								<source>src/badania</source>
 								<source>src/zabiegi</source>
 								<source>src/leki</source>
+								<source>src/profilaktyka</source>
 								<source>src/patogeny/bakterie</source>
 								<source>src/patogeny/grzyby</source>
 								<source>src/patogeny/pierwotniaki</source>
@@ -86,8 +98,60 @@
 								<source>src/choroby/neurologiczne</source>
 								<source>src/choroby/immunologiczne</source>
 								<source>src/choroby/dermatologiczne</source>
+								<source>src/choroby/biochemiczne</source>
+								<source>src/choroby/hematologiczne</source>
+								<source>src/choroby/hepatologiczne</source>
+								<source>src/choroby/kardiologiczne</source>
+								<source>src/choroby/mięśni</source>
+								<source>src/choroby/nefrologiczne</source>
+								<source>src/choroby/ogólnie</source>
+								<source>src/choroby/stomatologiczne</source>
+								<source>src/choroby/hemodynamiczne</source>
+								<source>src/choroby/zakaźne</source>
+								<source>src/choroby/gastroenterologiczne</source>
 							</sources>
 						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>mm-u-1</id>
+						<phase>install</phase>
+						<configuration>
+							<tasks>
+								<copy file="target/${project.artifactId}-${project.version}.jar"
+									tofile="latest.jar" />
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>mm-u-2</id>
+						<phase>install</phase>
+						<configuration>
+							<tasks>
+								<java
+									jar="target/${project.artifactId}-${project.version}-jar-with-dependencies.jar"
+									fork="true">
+									<arg value="generate" />
+									<arg value="-Djava.mainClass=pl.jblew.mm.App" />
+									<classpath>
+										<pathelement
+											location="target/${project.artifactId}-${project.version}-jar-with-dependencies.jar" />
+										<pathelement path="${java.class.path}" />
+									</classpath>
+								</java>
+							</tasks>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
 					</execution>
 				</executions>
 			</plugin>

@@ -1,60 +1,48 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
 import pl.jblew.mm.badania.WartośćReferencyjna;
+import pl.jblew.mm.dist.NotImplementedYetException;
 import pl.jblew.mm.typy.Przyczyna;
 
 public class AktywnośćElastazy extends BadanieAktywnościEnzymu {
-	private static AktywnośćElastazy instance;
+	public static final AktywnośćElastazy AktywnośćElastazy = new AktywnośćElastazy();
 
-	private AktywnośćElastazy() {
-	}
-
-	public static AktywnośćElastazy I() {
-		if (instance == null) {
-			instance = new AktywnośćElastazy();
-		}
-		return instance;
+	protected AktywnośćElastazy() {
 	}
 
 	@Override
 	public RodzajEnzymu jakiRodzajEnzymu() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public String lokalizacja() {
-		return "Lokalizcja do uzupłenienia";
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public String budowaEnzymu() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public String reakcja() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public WartośćReferencyjna[] wartościReferencyjne() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public Przyczyna[] przyczynyHiper() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public Przyczyna[] przyczynyHypo() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
 
 }

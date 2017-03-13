@@ -5,7 +5,7 @@ public interface ChorobaNowotworowa {
 		public static final ChorobaNowotworowa.WszystkieNowotwory WszystkieNowotwory = new ChorobaNowotworowa.WszystkieNowotwory();
 
 		protected WszystkieNowotwory() {
-			nowotworowa();
+			// nowotworowa();
 		}
 	}
 }

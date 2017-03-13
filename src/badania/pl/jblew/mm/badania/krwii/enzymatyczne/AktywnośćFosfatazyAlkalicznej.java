@@ -1,22 +1,48 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
-public class AktywnośćFosfatazyAlkalicznej extends BadanieAktywnościEnzymu {
-	private static AktywnośćFosfatazyAlkalicznej instance;
+import pl.jblew.mm.badania.WartośćReferencyjna;
+import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.typy.Przyczyna;
 
-	private AktywnośćFosfatazyAlkalicznej() {
+public class AktywnośćFosfatazyAlkalicznej extends BadanieAktywnościEnzymu {
+	public static final AktywnośćFosfatazyAlkalicznej AktywnośćFosfatazyAlkalicznej = new AktywnośćFosfatazyAlkalicznej();
+
+	protected AktywnośćFosfatazyAlkalicznej() {
 	}
 
-	public static AktywnośćFosfatazyAlkalicznej I() {
-		if (instance == null) {
-			instance = new AktywnośćFosfatazyAlkalicznej();
-		}
-		return instance;
+	@Override
+	public String lokalizacja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String budowaEnzymu() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String reakcja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public WartośćReferencyjna[] wartościReferencyjne() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHiper() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHypo() {
+		throw new NotImplementedYetException();
 	}
 
 	@Override
 	public RodzajEnzymu jakiRodzajEnzymu() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
-	
+
 }

@@ -11,6 +11,7 @@ git reset
 cat >.gitignore <<EOL
 target/
 bin/
+latest.jar
 *.jpg
 *.jpeg
 *.png

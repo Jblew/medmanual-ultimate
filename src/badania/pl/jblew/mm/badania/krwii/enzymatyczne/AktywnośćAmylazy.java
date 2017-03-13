@@ -1,23 +1,48 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
+import pl.jblew.mm.badania.WartośćReferencyjna;
+import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.typy.Przyczyna;
+
 public class AktywnośćAmylazy extends BadanieAktywnościEnzymu {
-	private static AktywnośćAmylazy instance;
+	public static final AktywnośćAmylazy AktywnośćAmylazy = new AktywnośćAmylazy();
 
-	private AktywnośćAmylazy() {
-	}
-
-	public static AktywnośćAmylazy I() {
-		if (instance == null) {
-			instance = new AktywnośćAmylazy();
-		}
-		return instance;
+	protected AktywnośćAmylazy() {
 	}
 
 	@Override
 	public RodzajEnzymu jakiRodzajEnzymu() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
 	}
-	
-	
+
+	@Override
+	public String lokalizacja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String budowaEnzymu() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String reakcja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public WartośćReferencyjna[] wartościReferencyjne() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHiper() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHypo() {
+		throw new NotImplementedYetException();
+	}
+
 }

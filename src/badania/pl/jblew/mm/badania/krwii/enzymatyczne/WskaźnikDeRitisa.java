@@ -1,5 +1,6 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
+import static pl.jblew.mm.dist.StaticUtils.array;
 import static pl.jblew.mm.dist.StaticUtils.link;
 
 import pl.jblew.mm.badania.Badanie;
@@ -29,7 +30,7 @@ public class WskaźnikDeRitisa extends Badanie {
 	}
 
 	public String wyjaśnienieWyniku() {
-		return "Pozwala ocenić stopień (przyczynę?) uszkodzenia wątroby.;
+		return "Pozwala ocenić stopień (przyczynę?) uszkodzenia wątroby.";
 	}
 
 	@Override
@@ -43,7 +44,6 @@ public class WskaźnikDeRitisa extends Badanie {
 
 	@Override
 	public Przyczyna[] przyczynyHypo() {
-		// TODO Auto-generated method stub
 		return null;
 	}
 

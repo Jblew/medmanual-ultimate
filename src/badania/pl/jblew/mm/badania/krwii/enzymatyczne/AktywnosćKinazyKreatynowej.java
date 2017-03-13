@@ -1,22 +1,48 @@
 package pl.jblew.mm.badania.krwii.enzymatyczne;
 
+import pl.jblew.mm.badania.WartośćReferencyjna;
+import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.typy.Przyczyna;
+
 public class AktywnosćKinazyKreatynowej extends BadanieAktywnościEnzymu {
-	private static AktywnosćKinazyKreatynowej instance;
+	public static final AktywnosćKinazyKreatynowej AktywnosćKinazyKreatynowej = new AktywnosćKinazyKreatynowej();
 
-	private AktywnosćKinazyKreatynowej() {
+	protected AktywnosćKinazyKreatynowej() {
 	}
 
-	public static AktywnosćKinazyKreatynowej I() {
-		if (instance == null) {
-			instance = new AktywnosćKinazyKreatynowej();
-		}
-		return instance;
-	}
-	
 	@Override
 	public RodzajEnzymu jakiRodzajEnzymu() {
-		// TODO Auto-generated method stub
-		return null;
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String lokalizacja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String budowaEnzymu() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public String reakcja() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public WartośćReferencyjna[] wartościReferencyjne() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHiper() {
+		throw new NotImplementedYetException();
+	}
+
+	@Override
+	public Przyczyna[] przyczynyHypo() {
+		throw new NotImplementedYetException();
 	}
 
 }
