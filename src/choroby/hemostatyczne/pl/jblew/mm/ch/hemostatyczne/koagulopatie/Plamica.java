@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.krwi.krzepnięcia.koagulopatie;
+package pl.jblew.mm.ch.hemostatyczne.koagulopatie;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 

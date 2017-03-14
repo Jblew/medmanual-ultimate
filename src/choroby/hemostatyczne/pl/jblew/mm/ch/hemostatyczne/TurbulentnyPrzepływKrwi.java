@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.krwi.krzepnięcia;
+package pl.jblew.mm.ch.hemostatyczne;
 
 import pl.jblew.mm.ch.ogólnie.Choroba;
 
