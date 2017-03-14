@@ -3,9 +3,9 @@ package pl.jblew.mm.leki;
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 
 import pl.jblew.mm.dist.NotImplementedYetException;
-import pl.jblew.mm.typy.Stan;
+import pl.jblew.mm.typy.Terapia;
 
-public class Lek extends Stan {
+public class Lek extends Terapia {
 	public static final Lek Lek = new Lek();
 
 	protected Lek() {
