@@ -10,4 +10,11 @@ public class NadwrażliwośćTypu3KompleksówImmunologicznych extends Nadwrażli
 	protected NadwrażliwośćTypu3KompleksówImmunologicznych() {
 		_constructor();
 	}
+
+	@Override
+	public String definicja() {
+		return "Kompleksy antygen-przeciwciało powstające w krążeniu "
+				+ "odkładają się w ścianie naczyń i prowadzą do aktywacji dopełniacza, "
+				+ "co skutkuje ostrym zapaleniem naczyń.";
+	}
 }

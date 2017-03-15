@@ -1,17 +1,17 @@
-package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu3;
+package pl.jblew.mm.ch.skóry;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
-import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.NadwrażliwośćTypu2ZależnaOdPrzeciwciał;
+import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu3.NadwrażliwośćTypu3KompleksówImmunologicznych;
 import pl.jblew.mm.ch.ogólnie.Choroba;
 import pl.jblew.mm.typy.Stan;
 
-public class ToczeńRumieniowatyUkładowy extends Choroba implements ChorobaAutoimmunologiczna {
-	public static final ToczeńRumieniowatyUkładowy ToczeńRumieniowatyUkładowy = new ToczeńRumieniowatyUkładowy();
+public class ReakcjaArthusa extends Choroba implements ChorobaAutoimmunologiczna {
+	public static final ReakcjaArthusa ReakcjaArthusa = new ReakcjaArthusa();
 
-	protected ToczeńRumieniowatyUkładowy() {
+	protected ReakcjaArthusa() {
 		_constructor();
 	}
 
@@ -22,13 +22,12 @@ public class ToczeńRumieniowatyUkładowy extends Choroba implements ChorobaAuto
 
 	@Override
 	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał,
-				NadwrażliwośćTypu3KompleksówImmunologicznych.NadwrażliwośćTypu3KompleksówImmunologicznych);
+		return array(NadwrażliwośćTypu3KompleksówImmunologicznych.NadwrażliwośćTypu3KompleksówImmunologicznych);
 	}
 
 	@Override
 	public String docelowyAntygen() {
-		return "Antygeny jądrowe";
+		return "Różne obce białka";
 	}
 
 	@Override

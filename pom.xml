@@ -98,7 +98,7 @@
 								<source>src/choroby/neurologiczne</source>
 								<source>src/choroby/immunologiczne</source>
 								<source>src/choroby/skóry</source>
-								<source>src/choroby/biochemiczne</source>
+								<source>src/choroby/metaboliczne</source>
 								<source>src/choroby/krwi</source>
 								<source>src/choroby/hepatologiczne</source>
 								<source>src/choroby/kardiologiczne</source>
@@ -110,6 +110,9 @@
 								<source>src/choroby/zakaźne</source>
 								<source>src/choroby/ppokarmowego</source>
 								<source>src/choroby/naczyń</source>
+								<source>src/choroby/hemostazy</source>
+								<source>src/choroby/szkieletowe</source>
+								
 							</sources>
 						</configuration>
 					</execution>

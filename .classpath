@@ -100,11 +100,12 @@
 	<classpathentry kind="src" path="src/choroby/nefrologiczne"/>
 	<classpathentry kind="src" path="src/choroby/zakaźne"/>
 	<classpathentry kind="src" path="src/choroby/hemodynamiczne"/>
-	<classpathentry kind="src" path="src/choroby/biochemiczne"/>
+	<classpathentry kind="src" path="src/choroby/metaboliczne"/>
 	<classpathentry kind="src" path="src/profilaktyka"/>
 	<classpathentry kind="src" path="src/choroby/zębów"/>
 	<classpathentry kind="src" path="src/choroby/naczyń"/>
-	<classpathentry kind="src" path="src/choroby/hemostatyczne"/>
+	<classpathentry kind="src" path="src/choroby/hemostazy"/>
+	<classpathentry kind="src" path="src/choroby/szkieletowe"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
 		<attributes>
 			<attribute name="maven.pomderived" value="true"/>

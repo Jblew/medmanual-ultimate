@@ -2,7 +2,7 @@ package pl.jblew.mm.ch.hemodynamiczne;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
-import pl.jblew.mm.ch.hemostatyczne.Zakrzepica;
+import pl.jblew.mm.ch.hemostazy.Zakrzepica;
 import pl.jblew.mm.ch.ogólnie.Choroba;
 import pl.jblew.mm.typy.Stan;
 

@@ -1,23 +1,18 @@
-package pl.jblew.mm.ch.skóry;
+package pl.jblew.mm.ch.metaboliczne;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
+import pl.jblew.mm.adnotacje.Comment;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.NadwrażliwośćTypu2ZależnaOdPrzeciwciał;
-import pl.jblew.mm.ch.ogólnie.Choroba;
 import pl.jblew.mm.typy.Stan;
 
-public class PęcherzycaZwykła extends Choroba implements ChorobaAutoimmunologiczna {
-	public static final PęcherzycaZwykła PęcherzycaZwykła = new PęcherzycaZwykła();
+public class CukrzycaOpornaNaInsulinę extends Cukrzyca implements ChorobaAutoimmunologiczna {
+	public static final CukrzycaOpornaNaInsulinę CukrzycaInsulinozależna = new CukrzycaOpornaNaInsulinę();
 
-	protected PęcherzycaZwykła() {
+	protected CukrzycaOpornaNaInsulinę() {
 		_constructor();
-	}
-
-	@Override
-	public Stan[] skutki() {
-		return array(PęcherzeNaSkórze.PęcherzeNaSkórze);
 	}
 
 	@Override
@@ -25,12 +20,15 @@ public class PęcherzycaZwykła extends Choroba implements ChorobaAutoimmunologi
 		return NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał.definicja();
 	}
 
+	@Override
+	@Comment(text = "Rzadki typ cukrzycy. W Cukrzycy typu 1 przeciwciała są przeciwko wyspom Langerhansa!")
 	public String docelowyAntygen() {
-		return "Desmogleina naskórka";
+		return "Receptor dla insuliny (anti-insulin receptor antibodies -AIRAs)";
 	}
 
+	@Override
 	public String mechanizm() {
-		return "Zależna od przeciwciał aktywacja proteaz";
+		return "Przeciwciała hamują przyłączanie insuliny do receptora";
 	}
 
 	@Override

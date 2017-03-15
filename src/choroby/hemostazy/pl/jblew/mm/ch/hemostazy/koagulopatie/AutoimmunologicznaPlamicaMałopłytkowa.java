@@ -1,23 +1,24 @@
-package pl.jblew.mm.ch.skóry;
+package pl.jblew.mm.ch.hemostazy.koagulopatie;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
-import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
+import pl.jblew.mm.adnotacje.Comment;
+import pl.jblew.mm.ch.hemodynamiczne.Krwotok;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.NadwrażliwośćTypu2ZależnaOdPrzeciwciał;
-import pl.jblew.mm.ch.ogólnie.Choroba;
 import pl.jblew.mm.typy.Stan;
 
-public class PęcherzycaZwykła extends Choroba implements ChorobaAutoimmunologiczna {
-	public static final PęcherzycaZwykła PęcherzycaZwykła = new PęcherzycaZwykła();
+public class AutoimmunologicznaPlamicaMałopłytkowa extends Plamica {
+	public static final AutoimmunologicznaPlamicaMałopłytkowa AutoimmunologicznaPlamicaMałopłytkowa = new AutoimmunologicznaPlamicaMałopłytkowa();
 
-	protected PęcherzycaZwykła() {
+	protected AutoimmunologicznaPlamicaMałopłytkowa() {
 		_constructor();
 	}
 
 	@Override
+	@Comment(text = "W podręczniku jest krwawienie. Czy krwawienie różni się od krwotoku?")
 	public Stan[] skutki() {
-		return array(PęcherzeNaSkórze.PęcherzeNaSkórze);
+		return array(Krwotok.Krwotok);
 	}
 
 	@Override
@@ -26,11 +27,11 @@ public class PęcherzycaZwykła extends Choroba implements ChorobaAutoimmunologi
 	}
 
 	public String docelowyAntygen() {
-		return "Desmogleina naskórka";
+		return "Białka błonowe płytek (integryny GpIIb/GpIIa)";
 	}
 
 	public String mechanizm() {
-		return "Zależna od przeciwciał aktywacja proteaz";
+		return "Opłaszczanie i fagocytoza płytek";
 	}
 
 	@Override
