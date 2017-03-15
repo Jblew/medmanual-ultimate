@@ -4,7 +4,6 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.adnotacje.Image;
 import pl.jblew.mm.badania.WartośćReferencyjna;
-import pl.jblew.mm.ch.gastroenterologiczne.naczyniowe.ZastójWKrążeniuWrotnym;
 import pl.jblew.mm.ch.hepatologiczne.ToksyczneUszkodzenieWątroby;
 import pl.jblew.mm.ch.hepatologiczne.drogiżółciowe.Cholestaza;
 import pl.jblew.mm.ch.hepatologiczne.zapalenia.ZapalenieWątroby;
@@ -12,6 +11,7 @@ import pl.jblew.mm.ch.kardiologiczne.ZawałMięśniaSercowego;
 import pl.jblew.mm.ch.krwi.niedokrwistości.NiedokrwistośćHemolityczna;
 import pl.jblew.mm.ch.mięśni.UszkodzenieMięśniPoprzeczniePrążkowanych;
 import pl.jblew.mm.ch.nefrologiczne.OstraNiewydolnośćNerek;
+import pl.jblew.mm.ch.ppokarmowego.naczyniowe.ZastójWKrążeniuWrotnym;
 import pl.jblew.mm.ch.zakaźne.MononukleozaZakaźna;
 import pl.jblew.mm.typy.Przyczyna;
 import pl.jblew.mm.zabiegi.Hemodializa;

@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.gastroenterologiczne.naczyniowe;
+package pl.jblew.mm.ch.ppokarmowego.naczyniowe;
 
 import pl.jblew.mm.ch.ogólnie.Choroba;
 

@@ -1,4 +1,4 @@
-package pl.jblew.mm.ch.metaboliczne;
+package pl.jblew.mm.ch.metaboliczne.cukrzyca;
 
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 

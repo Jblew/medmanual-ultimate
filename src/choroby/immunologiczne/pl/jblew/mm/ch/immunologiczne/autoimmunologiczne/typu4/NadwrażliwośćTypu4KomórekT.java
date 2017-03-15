@@ -15,6 +15,11 @@ public class NadwrażliwośćTypu4KomórekT extends Nadwrażliwość {
 	}
 
 	@Override
+	public String definicja() {
+		return "";
+	}
+
+	@Override
 	public Stan[] jestKomponentąDla() {
 		return array(Gruźlica.Gruźlica);
 	}

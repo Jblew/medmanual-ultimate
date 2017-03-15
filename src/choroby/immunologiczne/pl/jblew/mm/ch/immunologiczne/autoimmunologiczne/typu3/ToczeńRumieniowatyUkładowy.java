@@ -28,7 +28,7 @@ public class ToczeńRumieniowatyUkładowy extends Choroba implements ChorobaAuto
 
 	@Override
 	public String docelowyAntygen() {
-		return "Antygeny jądrowe";
+		return "Antygeny jądrowe. (Przeciwciała ANA to przeciwciała przerciwjądrowe)";
 	}
 
 	@Override
