@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii.enzymatyczne;
+package pl.jblew.mm.badania.krwi.enzymatyczne;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
@@ -13,7 +13,8 @@ import pl.jblew.mm.ch.mięśni.UszkodzenieMięśniPoprzeczniePrążkowanych;
 import pl.jblew.mm.ch.nefrologiczne.OstraNiewydolnośćNerek;
 import pl.jblew.mm.ch.ppokarmowego.naczyniowe.ZastójWKrążeniuWrotnym;
 import pl.jblew.mm.ch.zakaźne.MononukleozaZakaźna;
-import pl.jblew.mm.typy.Przyczyna;
+import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.typy.Stan;
 import pl.jblew.mm.zabiegi.Hemodializa;
 
 public class AktywnośćAminotransferazyAsparaginianowej extends BadanieAktywnościEnzymu {
@@ -60,25 +61,50 @@ public class AktywnośćAminotransferazyAsparaginianowej extends BadanieAktywno�
 	}
 
 	@Override
-	public Przyczyna[] przyczynyHiper() {
-		return array(przyczyna(ToksyczneUszkodzenieWątroby.ToksyczneUszkodzenieWątroby),
-				przyczyna(ZawałMięśniaSercowego.ZawałMięśniaSercowego),
-				przyczyna(ZapalenieWątroby.ZapalenieWątroby, "ostre"),
-				przyczyna(UszkodzenieMięśniPoprzeczniePrążkowanych.UszkodzenieMięśniPoprzeczniePrążkowanych,
-						"zespół zmiażdżenia"),
-				przyczyna(Cholestaza.Cholestaza),
-				/*           */przyczyna(ZastójWKrążeniuWrotnym.ZastójWKrążeniuWrotnym),
-				przyczyna(OstraNiewydolnośćNerek.OstraNiewydolnośćNerek),
-				przyczyna(NiedokrwistośćHemolityczna.NiedokrwistośćHemolityczna),
-				przyczyna(MononukleozaZakaźna.MononukleozaZakaźna));
+	public Stan[] stany() {
+		return array(Hiper.Hiper, Hypo.Hypo);
 	}
 
-	@Override
-	public Przyczyna[] przyczynyHypo() {
-		return array(przyczyna(Hemodializa.Hemodializa));
+	public static class Hiper extends Stan {
+		public static final Hiper Hiper = new Hiper();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO AktywnośćAminotransferazyAsparaginianowej.Hiper.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array(ToksyczneUszkodzenieWątroby.ToksyczneUszkodzenieWątroby,
+					ZawałMięśniaSercowego.ZawałMięśniaSercowego, stan(ZapalenieWątroby.ZapalenieWątroby, "ostre"),
+					stan(UszkodzenieMięśniPoprzeczniePrążkowanych.UszkodzenieMięśniPoprzeczniePrążkowanych,
+							"zespół zmiażdżenia"),
+					Cholestaza.Cholestaza, ZastójWKrążeniuWrotnym.ZastójWKrążeniuWrotnym,
+					OstraNiewydolnośćNerek.OstraNiewydolnośćNerek,
+					NiedokrwistośćHemolityczna.NiedokrwistośćHemolityczna, MononukleozaZakaźna.MononukleozaZakaźna);
+		}
+
 	}
 
-	@Image(url = "aminotransferases.png") /*
+	public static class Hypo extends Stan {
+		public static final Hypo Hypo = new Hypo();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO AktywnośćAminotransferazyAsparaginianowej.Hypo.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array(Hemodializa.Hemodializa);
+		}
+
+	}
+
+	@Image(url = "aminotransferases.png")
+	/*
 											
 											
 											
@@ -90,7 +116,7 @@ public class AktywnośćAminotransferazyAsparaginianowej extends BadanieAktywno�
 											
 											
 											
-											*/
+	*/
 	public void reakcjeAminotransferaz() {
 	}
 }

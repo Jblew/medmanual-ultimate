@@ -270,54 +270,52 @@ public class HIV extends Retrowirus {
 				+ ""
 				+ "- Może powodować zespół [mononukleozopodobny](../../Choroby i objawy/Infekcje ogólne/Mononukleoza zakaźna.md)"
 				+ "";
-		
-		@Override
-		public ImageReference[] galeria() {
-			return new ImageReference[] { _Image("fazy-aids.png", "Fazy AIDS"),
-					/*
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 */
-					_Image("hiv-serum-levels.png", "Poziomy przeciwciał w HIV"),
-					/*
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 * 
-					 */
-					
-			};
-		}
+	}
 
+	@Override
+	public ImageReference[] galeria() {
+		return new ImageReference[] { _Image("fazy-aids.png", "Fazy AIDS"),
+				/*
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 */
+				_Image("hiv-serum-levels.png", "Poziomy przeciwciał w HIV"),
+				/*
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 */
 
+		};
 	}
 }

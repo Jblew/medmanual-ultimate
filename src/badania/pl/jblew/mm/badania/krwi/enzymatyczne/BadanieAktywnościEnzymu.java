@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii.enzymatyczne;
+package pl.jblew.mm.badania.krwi.enzymatyczne;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
@@ -6,14 +6,14 @@ import pl.jblew.mm.adnotacje.Comment;
 import pl.jblew.mm.adnotacje.StringDescription;
 import pl.jblew.mm.badania.WartośćReferencyjna;
 import pl.jblew.mm.badania.ZasadaPobierania;
-import pl.jblew.mm.badania.krwi.BadanieKrwii;
+import pl.jblew.mm.badania.krwi.BadanieKrwi;
 import pl.jblew.mm.badania.krwi.RodzajProbówki;
 import pl.jblew.mm.badania.materiały.KrewŻylna;
 import pl.jblew.mm.badania.materiały.Materiał;
 import pl.jblew.mm.dist.OddzielnaImplementacjaDlaKażdegoDziecka;
-import pl.jblew.mm.typy.Przyczyna;
+import pl.jblew.mm.typy.Stan;
 
-public abstract class BadanieAktywnościEnzymu extends BadanieKrwii {
+public abstract class BadanieAktywnościEnzymu extends BadanieKrwi {
 
 	protected BadanieAktywnościEnzymu() {
 	}
@@ -104,12 +104,7 @@ public abstract class BadanieAktywnościEnzymu extends BadanieKrwii {
 		}
 
 		@Override
-		public Przyczyna[] przyczynyHiper() {
-			throw new OddzielnaImplementacjaDlaKażdegoDziecka();
-		}
-
-		@Override
-		public Przyczyna[] przyczynyHypo() {
+		public Stan[] stany() {
 			throw new OddzielnaImplementacjaDlaKażdegoDziecka();
 		}
 	};

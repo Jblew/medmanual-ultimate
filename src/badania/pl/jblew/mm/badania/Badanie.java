@@ -9,9 +9,11 @@ public abstract class Badanie {
 
 	public abstract Materiał[] materiały();
 
-	public abstract Przyczyna[] przyczynyHiper();
+	// public abstract Przyczyna[] przyczynyHiper();
 
-	public abstract Przyczyna[] przyczynyHypo();
+	// public abstract Przyczyna[] przyczynyHypo();
+
+	public abstract Stan[] stany();
 
 	public final ZasadaPobierania zasada(String zasada) {
 		return new TekstowaZasadaPobierania(zasada);

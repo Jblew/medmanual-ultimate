@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii.enzymatyczne;
+package pl.jblew.mm.badania.krwi.enzymatyczne;
 
 import pl.jblew.mm.typy.Jednostka;
 import pl.jblew.mm.typy.jednostki.JednostkaSI;

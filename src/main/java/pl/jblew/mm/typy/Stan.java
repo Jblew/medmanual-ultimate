@@ -13,15 +13,24 @@ public abstract class Stan {
 		throw new NotImplementedYetException();
 	}
 
+	// static
 	public static final Stan kombinacja(Stan... stany) {
 		return new KombinacjaStanów(stany);
+	}
+
+	public static final Stan stan(String stan) {
+		return new StanTekstowy(stan);
+	}
+
+	public static final Stan stan(Stan stan, String opis) {
+		return kombinacja(stan, new StanTekstowy(opis));
 	}
 
 	public ImageReference[] galeria() {
 		return new ImageReference[] {};
 	}
 
-	public ImageReference _Image(String url, String podpis) {
+	public static ImageReference _Image(String url, String podpis) {
 		return new ImageReference(url, podpis);
 	}
 

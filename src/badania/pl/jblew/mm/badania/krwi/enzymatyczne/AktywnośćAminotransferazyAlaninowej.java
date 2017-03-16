@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii.enzymatyczne;
+package pl.jblew.mm.badania.krwi.enzymatyczne;
 
 import static pl.jblew.mm.dist.StaticUtils.array;
 
@@ -7,7 +7,8 @@ import pl.jblew.mm.badania.WartośćReferencyjna;
 import pl.jblew.mm.ch.hepatologiczne.ToksyczneUszkodzenieWątroby;
 import pl.jblew.mm.ch.hepatologiczne.zapalenia.WirusoweZapalenieWątroby;
 import pl.jblew.mm.ch.mięśni.UszkodzenieMięśniPoprzeczniePrążkowanych;
-import pl.jblew.mm.typy.Przyczyna;
+import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.typy.Stan;
 import pl.jblew.mm.zabiegi.Hemodializa;
 
 public class AktywnośćAminotransferazyAlaninowej extends BadanieAktywnościEnzymu {
@@ -52,31 +53,53 @@ public class AktywnośćAminotransferazyAlaninowej extends BadanieAktywnościEnz
 				new WartośćReferencyjna("Kobiety", 9, 36, IU.I), new WartośćReferencyjna("Mężczyźni", 9, 43, IU.I));
 	}
 
-	@Override
-	public Przyczyna[] przyczynyHiper() {
-		return array(przyczyna(ToksyczneUszkodzenieWątroby.ToksyczneUszkodzenieWątroby),
-				przyczyna(WirusoweZapalenieWątroby.WirusoweZapalenieWątroby, "Również bezobjawowe"),
-				przyczyna(UszkodzenieMięśniPoprzeczniePrążkowanych.UszkodzenieMięśniPoprzeczniePrążkowanych));
-	}
-
-	@Override
-	public Przyczyna[] przyczynyHypo() {
-		return array(przyczyna(Hemodializa.Hemodializa, "Bo usuwa koenzym tej reakcji – fosforan pirydoksalu"));
-	}
-
-	@Image(url = "aminotransferases.png") /*
-											
-											
-											
-											
-											
-											
-											
-											
-											
-											
-											
-											*/
+	@Image(url = "aminotransferases.png")
+	/*
+												
+												
+	
+												
+												
+	*/
 	public void reakcjeAminotransferaz() {
+	}
+
+	@Override
+	public Stan[] stany() {
+		return array(Hiper.Hiper, Hypo.Hypo);
+	}
+
+	public static class Hiper extends Stan {
+		public static final Hiper Hiper = new Hiper();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO AktywnośćAminotransferazyAlaninowej.Hiper.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array(ToksyczneUszkodzenieWątroby.ToksyczneUszkodzenieWątroby,
+					stan(WirusoweZapalenieWątroby.WirusoweZapalenieWątroby, "Również bezobjawowe"),
+					UszkodzenieMięśniPoprzeczniePrążkowanych.UszkodzenieMięśniPoprzeczniePrążkowanych);
+		}
+
+	}
+
+	public static class Hypo extends Stan {
+		public static final Hypo Hypo = new Hypo();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO AktywnośćAminotransferazyAlaninowej.Hypo.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array(stan(Hemodializa.Hemodializa, "Bo usuwa koenzym tej reakcji – fosforan pirydoksalu"));
+		}
+
 	}
 }

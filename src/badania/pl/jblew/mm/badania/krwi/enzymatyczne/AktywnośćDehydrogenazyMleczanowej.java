@@ -1,4 +1,4 @@
-package pl.jblew.mm.badania.krwii.enzymatyczne;
+package pl.jblew.mm.badania.krwi.enzymatyczne;
 
 import static pl.jblew.mm.dist.StaticUtils.S;
 import static pl.jblew.mm.dist.StaticUtils.array;
@@ -11,8 +11,9 @@ import pl.jblew.mm.ch.krwi.niedokrwistości.NiedokrwistośćHemolityczna;
 import pl.jblew.mm.ch.krwi.niedokrwistości.NiedokrwistośćMegaloblastyczna;
 import pl.jblew.mm.ch.mięśni.ChorobaMięśniPoprzeczniePrążkowanych;
 import pl.jblew.mm.ch.ogólnie.ChorobaNowotworowa;
+import pl.jblew.mm.dist.NotImplementedYetException;
 import pl.jblew.mm.stany.fizjologiczne.Noworodek;
-import pl.jblew.mm.typy.Przyczyna;
+import pl.jblew.mm.typy.Stan;
 
 public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnościEnzymu {
 	private static AktywnośćDehydrogenazyMleczanowej I = new AktywnośćDehydrogenazyMleczanowej();
@@ -52,10 +53,15 @@ public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnośc
 
 	@Override
 	public String izoenzymy() {
-		return super.izoenzymy() + S()
+		return super.izoenzymy()
+				+ S()
 				+ "Zależnie od kombinacji podjednostek M i H w tetramerze rozwóżniamy 5 izoenzymów LDH. LDH1(HHHH) i LDH5(MMMM)"
-				+ S() + " - LDH1 (utlenia L-hydroksymaślan i jest nazywana dehydrogenazą hydroksymaślanową = HBDH)\n"
-				+ " - LDH2 - dominuje w surowicy zdrowych osób. \n" + " - LDH3 \n" + " - LDH4 \n" + " - LDH5 \n";
+				+ S()
+				+ " - LDH1 (utlenia L-hydroksymaślan i jest nazywana dehydrogenazą hydroksymaślanową = HBDH)\n"
+				+ " - LDH2 - dominuje w surowicy zdrowych osób. \n"
+				+ " - LDH3 \n"
+				+ " - LDH4 \n"
+				+ " - LDH5 \n";
 	}
 
 	@Override
@@ -66,24 +72,6 @@ public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnośc
 				new WartośćReferencyjna("Dorośli (bez rozróżnienia płci)", 0, 480, IU.I),
 				new WartośćReferencyjna("Mężczyźni wg IFCC", 243, 253, IU.I),
 				new WartośćReferencyjna("Kobiety wg IFCC", 244, 255, IU.I));
-	}
-
-	@Override
-	public Przyczyna[] przyczynyHiper() {
-		return array(przyczyna(Noworodek.Noworodek), /*  */
-				przyczyna(ZawałMięśniaSercowego.ZawałMięśniaSercowego, "LDH1"),
-				przyczyna(NiedokrwistośćHemolityczna.NiedokrwistośćHemolityczna, "LDH1 i LDH2"),
-				przyczyna(NiedokrwistośćMegaloblastyczna.NiedokrwistośćMegaloblastyczna, "LDH1 i LDH2"),
-				przyczyna(ChorobaWątroby.ChorobaWątroby, "LDH4"),
-				przyczyna(ChorobaMięśniPoprzeczniePrążkowanych.ChorobaMięśniPoprzeczniePrążkowanych, "LDH5"),
-				przyczyna(ChorobaNowotworowa.WszystkieNowotwory.WszystkieNowotwory));
-	}
-
-	@Override
-	public Przyczyna[] przyczynyHypo() {
-		return array(
-
-		);
 	}
 
 	@Image(url = "cykl_corih.png") /*
@@ -100,5 +88,47 @@ public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnośc
 									
 									*/
 	public void bierzeUdziałWCykluCorih() {
+	}
+
+	@Override
+	public Stan[] stany() {
+		return array(Hiper.Hiper, Hypo.Hypo);
+	}
+
+	public static class Hiper extends Stan {
+		public static final Hiper Hiper = new Hiper();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO enclosing_type.Hiper.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array(Noworodek.Noworodek, stan(ZawałMięśniaSercowego.ZawałMięśniaSercowego, "LDH1"),
+					stan(NiedokrwistośćHemolityczna.NiedokrwistośćHemolityczna, "LDH1 i LDH2"),
+					stan(NiedokrwistośćMegaloblastyczna.NiedokrwistośćMegaloblastyczna, "LDH1 i LDH2"),
+					stan(ChorobaWątroby.ChorobaWątroby, "LDH4"),
+					stan(ChorobaMięśniPoprzeczniePrążkowanych.ChorobaMięśniPoprzeczniePrążkowanych, "LDH5"),
+					ChorobaNowotworowa.WszystkieNowotwory.WszystkieNowotwory);
+		}
+
+	}
+
+	public static class Hypo extends Stan {
+		public static final Hypo Hypo = new Hypo();
+
+		@Override
+		public String definicja() {
+			throw new NotImplementedYetException();
+			// TODO enclosing_type.Hypo.definicja
+		}
+
+		@Override
+		public Stan[] przyczyny() {
+			return array();
+		}
+
 	}
 }
