@@ -1,0 +1,17 @@
+# Zatory płytkowe
+
+
+
+
+
+##Linkujące do tej strony
+
+[links]
+
+- [Nadpłytkowość samoistna](../Krew i chłonka/Nadpłytkowość samoistna.md)
+
+
+[/links]
+!tag:
+~
+
