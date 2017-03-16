@@ -45,4 +45,27 @@ public class HTLV extends Retrowirus {
 				+ "[Zasady leczenia infekcji wirusowych](../../Choroby i objawy/Infekcje ogólne/Zasady leczenia infekcji wirusowych.md)\n"
 				+ "";
 	}
+
+	@Override
+	public ImageReference[] galeria() {
+		return new ImageReference[] { _Image("rumien-nagly.png", "Rumień nagły"),
+				/*
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 * 
+				 */
+
+		};
+	}
+
 }
