@@ -28,14 +28,6 @@ public class Choroba extends Stan {
 		throw new NotImplementedYetException();
 	}
 
-	public Stan[] przyczyny() {
-		throw new NotImplementedYetException();
-	}
-
-	public Stan[] skutki() {
-		throw new NotImplementedYetException();
-	}
-
 	public Stan[] maKomponenty() {
 		return array();
 	}

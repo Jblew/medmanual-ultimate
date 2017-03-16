@@ -12,11 +12,12 @@ import pl.jblew.mm.generator.GeneratorSkip;
  */
 @GeneratorSkip
 public class App {
-	public static void main(String[] args) throws IOException, ClassNotFoundException {
+	public static void main(String[] args) throws ClassNotFoundException, IOException {
 		// if (args.length > 1) {
 		// String cmd = args[1];
 		// if (cmd.equals("generate")) {
-		new DocGenerator("doc", new File("latest.jar"), App.class).generate();
+		DocGenerator g = new DocGenerator("doc", new File("latest.jar"), App.class);// .generate();
+		g.generate();
 		// }
 		// }
 	}

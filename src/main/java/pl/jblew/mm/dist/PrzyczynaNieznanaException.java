@@ -1,10 +1,12 @@
 package pl.jblew.mm.dist;
 
-public class PrzyczynaNieznanaException extends RuntimeException {
+import pl.jblew.mm.generator.GeneratorSkip;
 
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 2914196048398429047L;
+@GeneratorSkip
+public class PrzyczynaNieznanaException extends MedmanualThrowable {
+
+	public PrzyczynaNieznanaException() {
+		super();
+	}
 
 }

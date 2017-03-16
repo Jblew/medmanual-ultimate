@@ -6,6 +6,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 import pl.jblew.mm.adnotacje.Comment;
+import pl.jblew.mm.dist.MedmanualThrowable;
 
 @GeneratorSkip
 public class ClassLink {
@@ -40,6 +41,11 @@ public class ClassLink {
 		} catch (InvocationTargetException | IllegalArgumentException | SecurityException | NoSuchMethodException
 				| InstantiationException | IllegalAccessException e) {
 			content += "<p>" + e.toString() + "</p>";
+		} catch (MedmanualThrowable e) {
+			content += "<p>" + e.toString() + "</p>";
+		} catch (Exception e) {
+			content += "<p>" + e.toString() + "</p>";
+			System.out.println("Here: " + e.toString());
 		}
 
 		return HtmlGenerator.toHtml(clazz.getName(), content);

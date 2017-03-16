@@ -23,7 +23,7 @@ public class Twardzina extends Choroba implements ChorobaAutoimmunologiczna {
 
 	@Override
 	public String docelowyAntygen() {
-
+		return "Nieznany. Nie wiadomo nawet, czy istnieje.";
 	}
 
 	@Override

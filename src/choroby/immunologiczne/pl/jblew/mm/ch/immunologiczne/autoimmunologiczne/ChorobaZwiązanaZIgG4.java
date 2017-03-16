@@ -10,4 +10,11 @@ public class ChorobaZwiązanaZIgG4 extends Choroba {
 	protected ChorobaZwiązanaZIgG4() {
 		_constructor();
 	}
+
+	@Override
+	public String definicja() {
+		return "Jest to choroba przebiegająca z zapaleniem i włóknieniem, które charakteryzuje się "
+				+ "wystąpieniem guzowatych zmian w różnych narządach. W tkankach występuje zwiększona liczba "
+				+ "plazmocytów produkujących IgG4. Często, ale nie zawsze także poziom IgG4 w surowicy jest podniesiony.";
+	}
 }
