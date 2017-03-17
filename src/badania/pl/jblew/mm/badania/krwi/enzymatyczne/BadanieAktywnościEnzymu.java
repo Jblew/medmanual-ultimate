@@ -11,8 +11,10 @@ import pl.jblew.mm.badania.krwi.RodzajProbówki;
 import pl.jblew.mm.badania.materiały.KrewŻylna;
 import pl.jblew.mm.badania.materiały.Materiał;
 import pl.jblew.mm.dist.OddzielnaImplementacjaDlaKażdegoDziecka;
+import pl.jblew.mm.generator.GeneratorSkip;
 import pl.jblew.mm.typy.Stan;
 
+@GeneratorSkip
 public abstract class BadanieAktywnościEnzymu extends BadanieKrwi {
 
 	protected BadanieAktywnościEnzymu() {
@@ -54,9 +56,10 @@ public abstract class BadanieAktywnościEnzymu extends BadanieKrwi {
 
 	@Override
 	public Materiał[] materiały() {
-		return new Materiał[] { KrewŻylna.Osocze.I(), KrewŻylna.Pełna.I() };
+		return new Materiał[] { KrewŻylna.Osocze.Osocze, KrewŻylna.Pełna.Pełna };
 	}
 
+	@GeneratorSkip
 	public static enum RodzajEnzymu {
 
 		@Comment(text = "Są wykrywane tylko po uszkodzeniu komórki. Są różnie zlokalizowane (cytoplazma,mitochondrium,lizosomy, jądro),"
@@ -76,6 +79,7 @@ public abstract class BadanieAktywnościEnzymu extends BadanieKrwi {
 		ZEWNĄTRZKOMÓRKOWY_EKSKRECYJNY
 	}
 
+	@GeneratorSkip
 	public static final BadanieAktywnościEnzymu BadanieAktywnościEnzymu = new BadanieAktywnościEnzymu() {
 
 		@Override

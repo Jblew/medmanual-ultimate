@@ -5,7 +5,6 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu4.NadwrażliwośćTypu4KomórekT;
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class CukrzycaInsulinozależna extends Cukrzyca implements ChorobaAutoimmunologiczna {
@@ -33,7 +32,7 @@ public class CukrzycaInsulinozależna extends Cukrzyca implements ChorobaAutoimm
 
 	@Override
 	public Stan[] skutki() {
-		return array(new Skutek("Insulitis (przewlekłe zapalenie w obrębie wysp trzustkowych)"),
-				new Skutek("Zniszczenie komórek beta"), Cukrzyca);
+		return array(stan("Insulitis (przewlekłe zapalenie w obrębie wysp trzustkowych)"),
+				stan("Zniszczenie komórek beta"), Cukrzyca);
 	}
 }

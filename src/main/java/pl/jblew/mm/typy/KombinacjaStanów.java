@@ -1,7 +1,8 @@
 package pl.jblew.mm.typy;
 
-import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.generator.GeneratorSkip;
 
+@GeneratorSkip
 public class KombinacjaStanów extends Stan {
 	public final Stan[] kombinacja;
 
@@ -12,7 +13,20 @@ public class KombinacjaStanów extends Stan {
 
 	@Override
 	public String definicja() {
-		throw new NotImplementedYetException();
+		return this.toInlineString();
 	}
 
+	@Override
+	public String toInlineString() {
+		String out = "{ ";
+		boolean first = true;
+		for (Stan s : kombinacja) {
+			if (!first)
+				out += " + ";
+			out += s.toInlineString();
+			first = false;
+		}
+		out += " }";
+		return out;
+	}
 }

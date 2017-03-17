@@ -5,7 +5,7 @@ import static pl.jblew.mm.dist.StaticUtils._constructor;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.Nadwrażliwość;
 
 public class NadwrażliwośćTypu1Natychmiastowa extends Nadwrażliwość {
-	public static final NadwrażliwośćTypu1Natychmiastowa NadwrażliwośćTypu1 = new NadwrażliwośćTypu1Natychmiastowa();
+	public static final NadwrażliwośćTypu1Natychmiastowa NadwrażliwośćTypu1Natychmiastowa = new NadwrażliwośćTypu1Natychmiastowa();
 
 	protected NadwrażliwośćTypu1Natychmiastowa() {
 		_constructor();

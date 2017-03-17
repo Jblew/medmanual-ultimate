@@ -3,7 +3,6 @@ package pl.jblew.mm.ch.immunologiczne.niedobory.pierwotne.odpowiedziwrodzonej;
 import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class WrodzoneZaburzeniaFagocytozy extends GenetycznyNiedobórSkładnikówOdpowiedziWrodzonej {
@@ -27,7 +26,7 @@ public class WrodzoneZaburzeniaFagocytozy extends GenetycznyNiedobórSkładnikó
 
 		@Override
 		public Stan[] skutki() {
-			return array(new Skutek("Przewlekła choroba ziarniniakowa"));
+			return array(stan("Przewlekła choroba ziarniniakowa"));
 		}
 
 	}

@@ -1,5 +1,6 @@
 package pl.jblew.mm.badania.krwi.enzymatyczne;
 
+import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 import static pl.jblew.mm.dist.StaticUtils.link;
 
@@ -14,6 +15,12 @@ import pl.jblew.mm.dist.StringThrowable;
 import pl.jblew.mm.typy.Stan;
 
 public class WskaźnikDeRitisa extends Badanie {
+	public static final WskaźnikDeRitisa WskaźnikDeRitisa = new WskaźnikDeRitisa();
+
+	protected WskaźnikDeRitisa() {
+		_constructor();
+	}
+
 	public String opis() {
 		return "Jest to stosunek AST/ALT";
 	}

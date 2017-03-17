@@ -5,7 +5,6 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu4.NadwrażliwośćTypu4KomórekT;
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class KontaktoweZapalenieSkóry extends ZapalenieSkóry implements ChorobaAutoimmunologiczna {
@@ -32,8 +31,7 @@ public class KontaktoweZapalenieSkóry extends ZapalenieSkóry implements Chorob
 
 	@Override
 	public Stan[] skutki() {
-		return array(new Skutek("Martwica naskórka"),
-				new Skutek("Zapalenie skóry z zaczerwienieniem skóry oraz pęcherzami"));
+		return array(stan("Martwica naskórka"), stan("Zapalenie skóry z zaczerwienieniem skóry oraz pęcherzami"));
 	}
 
 }

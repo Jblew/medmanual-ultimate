@@ -16,7 +16,7 @@ import pl.jblew.mm.stany.fizjologiczne.Noworodek;
 import pl.jblew.mm.typy.Stan;
 
 public final class AktywnośćDehydrogenazyMleczanowej extends BadanieAktywnościEnzymu {
-	private static AktywnośćDehydrogenazyMleczanowej I = new AktywnośćDehydrogenazyMleczanowej();
+	public static final AktywnośćDehydrogenazyMleczanowej AktywnośćDehydrogenazyMleczanowej = new AktywnośćDehydrogenazyMleczanowej();
 
 	private AktywnośćDehydrogenazyMleczanowej() {
 	}

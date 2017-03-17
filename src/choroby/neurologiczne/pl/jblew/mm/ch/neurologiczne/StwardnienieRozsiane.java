@@ -5,7 +5,6 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunologiczna;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu4.NadwrażliwośćTypu4KomórekT;
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class StwardnienieRozsiane extends ChorobaDemielinizacyjna implements ChorobaAutoimmunologiczna {
@@ -32,7 +31,7 @@ public class StwardnienieRozsiane extends ChorobaDemielinizacyjna implements Cho
 
 	@Override
 	public Stan[] skutki() {
-		return array(new Skutek("Demielinizacja w OUN"), new Skutek("Zapalenie wokół naczyń"), new Skutek("Porażenie"),
-				new Skutek("Zmiany oczne"));
+		return array(stan("Demielinizacja w OUN"), stan("Zapalenie wokół naczyń"), stan("Porażenie"),
+				stan("Zmiany oczne"));
 	}
 }

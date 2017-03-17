@@ -1,5 +1,8 @@
 package pl.jblew.mm.typy;
 
+import pl.jblew.mm.generator.GeneratorSkip;
+
+@GeneratorSkip
 public class StanTekstowy extends Stan {
 	private final String definicja;
 
@@ -13,4 +16,8 @@ public class StanTekstowy extends Stan {
 		return definicja;
 	}
 
+	@Override
+	public String toInlineString() {
+		return definicja();
+	}
 }

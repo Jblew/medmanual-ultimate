@@ -9,7 +9,7 @@ import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.NadwrażliwośćTy
 import pl.jblew.mm.typy.Stan;
 
 public class CukrzycaOpornaNaInsulinę extends Cukrzyca implements ChorobaAutoimmunologiczna {
-	public static final CukrzycaOpornaNaInsulinę CukrzycaInsulinozależna = new CukrzycaOpornaNaInsulinę();
+	public static final CukrzycaOpornaNaInsulinę CukrzycaOpornaNaInsulinę = new CukrzycaOpornaNaInsulinę();
 
 	protected CukrzycaOpornaNaInsulinę() {
 		_constructor();

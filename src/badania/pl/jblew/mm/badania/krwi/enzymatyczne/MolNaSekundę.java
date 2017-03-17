@@ -1,8 +1,10 @@
 package pl.jblew.mm.badania.krwi.enzymatyczne;
 
+import pl.jblew.mm.generator.GeneratorSkip;
 import pl.jblew.mm.typy.Jednostka;
 import pl.jblew.mm.typy.jednostki.JednostkaSI;
 
+@GeneratorSkip
 public class MolNaSekundę extends JednostkaSI {
 	public static final MolNaSekundę I = new MolNaSekundę();
 

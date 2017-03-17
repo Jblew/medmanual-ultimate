@@ -7,7 +7,6 @@ import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.ChorobaAutoimmunol
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu2.NadwrażliwośćTypu2ZależnaOdPrzeciwciał;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu3.NadwrażliwośćTypu3KompleksówImmunologicznych;
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu4.NadwrażliwośćTypu4KomórekT;
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class ReumatoidalneZapalenieStawów extends ZapalenieStawów implements ChorobaAutoimmunologiczna {
@@ -38,7 +37,7 @@ public class ReumatoidalneZapalenieStawów extends ZapalenieStawów implements C
 
 	@Override
 	public Stan[] skutki() {
-		return array(ZapalenieStawów, new Skutek("Niszczenie chrząstki stawowej oraz kości"));
+		return array(ZapalenieStawów, stan("Niszczenie chrząstki stawowej oraz kości"));
 	}
 
 }

@@ -1,11 +1,9 @@
 package pl.jblew.mm.typy.jednostki;
 
-import pl.jblew.mm.adnotacje.*;
-import pl.jblew.mm.dist.*;
+import pl.jblew.mm.generator.GeneratorSkip;
 import pl.jblew.mm.typy.Jednostka;
 
-import static pl.jblew.mm.dist.StaticUtils.*;
-
+@GeneratorSkip
 public class InnaJednostka extends Jednostka {
 	public final String name;
 
@@ -34,5 +32,4 @@ public class InnaJednostka extends Jednostka {
 		return name;
 	}
 
-	
 }

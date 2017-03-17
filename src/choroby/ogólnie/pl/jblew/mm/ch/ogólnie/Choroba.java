@@ -4,6 +4,7 @@ import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.dist.BłądMerytoryczny;
 import pl.jblew.mm.dist.NotImplementedYetException;
+import pl.jblew.mm.generator.GeneratorSkip;
 import pl.jblew.mm.typy.Stan;
 
 public class Choroba extends Stan {
@@ -12,6 +13,7 @@ public class Choroba extends Stan {
 	protected Choroba() {
 	}
 
+	@GeneratorSkip
 	public Choroba nowotworowa() {
 		if (this instanceof ChorobaNowotworowa) {
 			return this;
@@ -28,11 +30,21 @@ public class Choroba extends Stan {
 		throw new NotImplementedYetException();
 	}
 
+	// @MethodParser(method = "parseMaKomponenty")
 	public Stan[] maKomponenty() {
 		return array();
 	}
 
+	// @MethodParser(method = "parseJestKomponentąDla")
 	public Stan[] jestKomponentąDla() {
 		return array();
 	}
+
+	/*
+	 * @GeneratorSkip public String parseMaKomponenty() { String out = ""; }
+	 * 
+	 * @GeneratorSkip public String parseJestKomponentąDla() {
+	 * 
+	 * }
+	 */
 }

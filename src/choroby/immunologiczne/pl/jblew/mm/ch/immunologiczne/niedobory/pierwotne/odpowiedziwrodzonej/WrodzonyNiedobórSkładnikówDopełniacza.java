@@ -4,7 +4,6 @@ import static pl.jblew.mm.dist.StaticUtils._constructor;
 import static pl.jblew.mm.dist.StaticUtils.array;
 
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu3.NadwrażliwośćTypu3KompleksówImmunologicznych;
-import pl.jblew.mm.typy.Skutek;
 import pl.jblew.mm.typy.Stan;
 
 public class WrodzonyNiedobórSkładnikówDopełniacza extends GenetycznyNiedobórSkładnikówOdpowiedziWrodzonej {
@@ -29,7 +28,7 @@ public class WrodzonyNiedobórSkładnikówDopełniacza extends GenetycznyNiedob�
 
 		@Override
 		public Stan[] skutki() {
-			return array(new Skutek("Zakażenia bakterimi ropotwórczymi"));
+			return array(stan("Zakażenia bakterimi ropotwórczymi"));
 		}
 
 	}
@@ -69,7 +68,7 @@ public class WrodzonyNiedobórSkładnikówDopełniacza extends GenetycznyNiedob�
 
 		@Override
 		public Stan[] skutki() {
-			return array(new Skutek("Zakażenia Neisseria"));
+			return array(stan("Zakażenia Neisseria"));
 		}
 
 	}
@@ -88,7 +87,7 @@ public class WrodzonyNiedobórSkładnikówDopełniacza extends GenetycznyNiedob�
 
 		@Override
 		public Stan[] skutki() {
-			return array(new Skutek("Wrodzony obrzęk naczynioruchowy => powtarzające się epizody "
+			return array(stan("Wrodzony obrzęk naczynioruchowy => powtarzające się epizody "
 					+ "miejscowego obrzęku zajmującego skórę i/lub błony śluzowe."));
 		}
 

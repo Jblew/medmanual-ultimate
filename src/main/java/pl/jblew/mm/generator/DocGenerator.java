@@ -8,6 +8,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.List;
+import java.util.Map;
 import java.util.jar.JarEntry;
 import java.util.jar.JarFile;
 import java.util.zip.ZipEntry;
@@ -35,14 +36,17 @@ public class DocGenerator {
 			throw new IOException("Could not create dirs");
 
 		List<Class<?>> classes = this.loadAndScanJar(jarFile);
-		ClassLink[] links = new ClassParser().parse(classes);
+		Map<Class<?>, ClassLink> links = new ClassParser().parse(classes);
 
-		for (ClassLink cl : links) {
+		for (ClassLink cl : links.values()) {
+			String treeCode = TreeGenerator.getTreeHtml(links, cl);
 			File path = new File(rootDir.getPath() + "/" + cl.getRelativePath());
 			path.getParentFile().mkdirs();
 			path.createNewFile();
 
-			String html = cl.getHtml();
+			String html = GenericParser.parseClass(cl.getClazz(), links);
+			html = GenericParser.resolveLinks(html, links, cl);
+			html = HtmlGenerator.toHtml(cl.getClazz().getSimpleName(), html, treeCode);
 
 			PrintWriter pw = new PrintWriter(new OutputStreamWriter(new FileOutputStream(path), "UTF-8"));
 			pw.print(html);
