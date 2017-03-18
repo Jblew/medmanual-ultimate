@@ -1,7 +1,5 @@
 package pl.jblew.mm.ch.ogólnie;
 
-import static pl.jblew.mm.dist.StaticUtils.array;
-
 import pl.jblew.mm.dist.BłądMerytoryczny;
 import pl.jblew.mm.dist.NotImplementedYetException;
 import pl.jblew.mm.generator.GeneratorSkip;
@@ -30,15 +28,13 @@ public class Choroba extends Stan {
 		throw new NotImplementedYetException();
 	}
 
-	// @MethodParser(method = "parseMaKomponenty")
-	public Stan[] maKomponenty() {
-		return array();
-	}
-
-	// @MethodParser(method = "parseJestKomponentąDla")
-	public Stan[] jestKomponentąDla() {
-		return array();
-	}
+	/*
+	 * // @MethodParser(method = "parseMaKomponenty") public Stan[]
+	 * maKomponenty() { return array(); }
+	 * 
+	 * // @MethodParser(method = "parseJestKomponentąDla") public Stan[]
+	 * jestKomponentąDla() { return array(); }
+	 */
 
 	/*
 	 * @GeneratorSkip public String parseMaKomponenty() { String out = ""; }

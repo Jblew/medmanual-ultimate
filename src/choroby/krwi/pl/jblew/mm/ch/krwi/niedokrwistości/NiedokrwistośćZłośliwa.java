@@ -25,13 +25,13 @@ public class NiedokrwistośćZłośliwa extends Niedokrwistość implements Chor
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Neutralizacja czynnika wewnętrznego --> zmniejszona absorpcja wit. B12 --> niedokrwistość megaloblastyczna";
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał);
+	public Stan[] przyczyny() {
+		return array(new NadwrażliwośćTypu2ZależnaOdPrzeciwciał(docelowyAntygen(), mechanizmNiszczenia()));
 	}
 
 	@Override

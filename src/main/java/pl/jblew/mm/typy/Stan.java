@@ -5,6 +5,7 @@ import pl.jblew.mm.dist.OddzielnaImplementacjaDlaKażdegoDziecka;
 import pl.jblew.mm.generator.GeneratorSkip;
 import pl.jblew.mm.generator.GenericParser;
 import pl.jblew.mm.generator.SelfParsing;
+import pl.jblew.mm.generator.ŚcieżkaStanów;
 
 @GeneratorSkip
 public abstract class Stan implements SelfParsing {
@@ -51,21 +52,24 @@ public abstract class Stan implements SelfParsing {
 		} catch (NotImplementedYetException | OddzielnaImplementacjaDlaKażdegoDziecka e) {
 
 		}
+
+		out += new ŚcieżkaStanów(this, ŚcieżkaStanów.Kierunek.OBA).toHtml();
+
 		out += "<hr />";
 		out += GenericParser.parseMethodsExcept(getClass(), this,
-				new String[] { "definicja", "skutki", "przyczyny", "parse", "toInlineString" });
+				new String[] { "definicja", "skutki", "przyczyny", "parse", "toInlineString", "toString" });
 		return out;
 	}
 
 	@GeneratorSkip
 	public String toInlineString() {
-		return "<!-" + getClass().getName() + ".toInlineString()-->" + GenericParser.getLink(this.getClass());
+		return GenericParser.getLink(this.getClass());
 	}
 
 	@Override
 	@GeneratorSkip
 	public String toString() {
-		return toInlineString();
+		return this.getClass().getName();
 	}
 
 	/*

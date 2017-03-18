@@ -20,8 +20,8 @@ public class Gruźlica extends Choroba {
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu4KomórekT.NadwrażliwośćTypu4KomórekT);
+	public Stan[] skutki() {
+		return array(new NadwrażliwośćTypu4KomórekT("-?-uzupełnić ", "-?-uzupełnić"));
 	}
 
 }

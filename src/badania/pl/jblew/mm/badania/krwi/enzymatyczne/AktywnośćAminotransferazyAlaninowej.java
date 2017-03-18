@@ -34,7 +34,8 @@ public class AktywnośćAminotransferazyAlaninowej extends BadanieAktywnościEnz
 	}
 
 	@Override
-	@Image(url = "alt.jpg") /*
+	@Image(url = "alt.jpg")
+	/*
 							
 							
 							

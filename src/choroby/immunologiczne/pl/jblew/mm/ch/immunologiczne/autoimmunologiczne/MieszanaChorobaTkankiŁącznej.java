@@ -23,7 +23,7 @@ public class MieszanaChorobaTkankiŁącznej extends Choroba implements ChorobaAu
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
+	public Stan[] przyczyny() {
 		return array(ToczeńRumieniowatyUkładowy.ToczeńRumieniowatyUkładowy,
 				ZapalenieWielomięśniowe.ZapalenieWielomięśniowe, Twardzina.Twardzina);
 	}
@@ -34,7 +34,7 @@ public class MieszanaChorobaTkankiŁącznej extends Choroba implements ChorobaAu
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Złożony";
 	}
 

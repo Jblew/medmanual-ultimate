@@ -114,8 +114,8 @@ public class GenericParser {
 	public static String parseClass(Class<?> clazz, Map<Class<?>, ClassLink> links, int level) {
 		System.out.println("Parsing class " + clazz.getName());
 		long prevTime = System.currentTimeMillis();
-		String out = "<h" + (level + 1) + ">" + clazz.getSimpleName() + "</h\"+(level+1)+\">";
-		out += "<h" + (level + 2) + ">" + clazz.getName() + "</h" + (level + 2) + ">";
+		String out = "<h" + (level + 1) + ">" + clazz.getSimpleName() + "</h" + (level + 1) + ">";
+		out += "<small>" + clazz.getName() + "</small>";
 
 		out += parseAnnotations(clazz.getAnnotations());
 

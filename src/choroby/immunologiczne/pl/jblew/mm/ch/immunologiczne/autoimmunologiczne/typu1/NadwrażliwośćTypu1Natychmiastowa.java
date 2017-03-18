@@ -1,14 +1,13 @@
 package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu1;
 
-import static pl.jblew.mm.dist.StaticUtils._constructor;
-
 import pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.Nadwrażliwość;
 
-public class NadwrażliwośćTypu1Natychmiastowa extends Nadwrażliwość {
-	public static final NadwrażliwośćTypu1Natychmiastowa NadwrażliwośćTypu1Natychmiastowa = new NadwrażliwośćTypu1Natychmiastowa();
+public final class NadwrażliwośćTypu1Natychmiastowa extends Nadwrażliwość {
+	public static final NadwrażliwośćTypu1Natychmiastowa NadwrażliwośćTypu1Natychmiastowa = new NadwrażliwośćTypu1Natychmiastowa(
+			"-", "-");
 
-	protected NadwrażliwośćTypu1Natychmiastowa() {
-		_constructor();
+	public NadwrażliwośćTypu1Natychmiastowa(String antygen, String mechanizmNiszczenia) {
+		super(antygen, mechanizmNiszczenia);
 	}
 
 	@Override
@@ -17,4 +16,5 @@ public class NadwrażliwośćTypu1Natychmiastowa extends Nadwrażliwość {
 				+ "po interakcji antygenu z IgE związanym z błoną mastocytów i bazofilów. "
 				+ "Następuje zwykle w ciągu kilku minut.";
 	}
+
 }

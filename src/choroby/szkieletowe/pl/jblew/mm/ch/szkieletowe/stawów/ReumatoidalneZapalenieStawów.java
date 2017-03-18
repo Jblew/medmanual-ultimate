@@ -23,13 +23,13 @@ public class ReumatoidalneZapalenieStawów extends ZapalenieStawów implements C
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Zapalenie kontrolowane przez cytokiny z Th17 (i Th1?). Przeciwciała i kompleksy "
 				+ "immunologiczne też mają rolę.";
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
+	public Stan[] przyczyny() {
 		return array(NadwrażliwośćTypu4KomórekT.NadwrażliwośćTypu4KomórekT,
 				NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał,
 				NadwrażliwośćTypu3KompleksówImmunologicznych.NadwrażliwośćTypu3KompleksówImmunologicznych);

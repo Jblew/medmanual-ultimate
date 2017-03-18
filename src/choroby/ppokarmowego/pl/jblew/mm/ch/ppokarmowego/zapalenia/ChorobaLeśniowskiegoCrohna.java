@@ -17,7 +17,7 @@ public class ChorobaLeśniowskiegoCrohna extends Choroba implements ChorobaAutoi
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
+	public Stan[] przyczyny() {
 		return array(NadwrażliwośćTypu4KomórekT.NadwrażliwośćTypu4KomórekT);
 	}
 
@@ -27,7 +27,7 @@ public class ChorobaLeśniowskiegoCrohna extends Choroba implements ChorobaAutoi
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		throw new NotImplementedYetException();
 	}
 }

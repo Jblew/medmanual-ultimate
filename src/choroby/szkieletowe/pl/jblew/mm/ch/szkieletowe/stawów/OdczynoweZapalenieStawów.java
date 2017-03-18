@@ -15,7 +15,7 @@ public class OdczynoweZapalenieStawów extends ZapalenieStawów implements Choro
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
+	public Stan[] przyczyny() {
 		return array(NadwrażliwośćTypu3KompleksówImmunologicznych.NadwrażliwośćTypu3KompleksówImmunologicznych);
 	}
 
@@ -25,7 +25,7 @@ public class OdczynoweZapalenieStawów extends ZapalenieStawów implements Choro
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return NadwrażliwośćTypu3KompleksówImmunologicznych.NadwrażliwośćTypu3KompleksówImmunologicznych.definicja();
 	}
 }

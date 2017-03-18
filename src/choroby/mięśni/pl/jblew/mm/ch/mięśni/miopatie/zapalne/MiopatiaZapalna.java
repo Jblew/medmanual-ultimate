@@ -26,7 +26,7 @@ public class MiopatiaZapalna extends Miopatia {
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
+	public Stan[] przyczyny() {
 		return array(Nadwrażliwość.Nadwrażliwość);
 	}
 

@@ -25,12 +25,12 @@ public class Miastenia extends ChorobaMięśniPoprzeczniePrążkowanych implemen
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Przeciwciała kompetycyjnie blokują receptor";
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał);
+	public Stan[] przyczyny() {
+		return array(new NadwrażliwośćTypu2ZależnaOdPrzeciwciał(docelowyAntygen(), mechanizmNiszczenia()));
 	}
 }

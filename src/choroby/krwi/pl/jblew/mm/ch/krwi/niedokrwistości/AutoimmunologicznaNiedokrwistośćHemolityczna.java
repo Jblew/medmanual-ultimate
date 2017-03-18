@@ -27,13 +27,13 @@ public class AutoimmunologicznaNiedokrwistośćHemolityczna extends Niedokrwisto
 		return "Białka błony komórkowej erytrocytów (głównie antygeny Rh, antygen I)";
 	}
 
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Opłaszczanie i fagocytoza erytrocytów";
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał);
+	public Stan[] przyczyny() {
+		return array(new NadwrażliwośćTypu2ZależnaOdPrzeciwciał(docelowyAntygen(), mechanizmNiszczenia()));
 	}
 
 }

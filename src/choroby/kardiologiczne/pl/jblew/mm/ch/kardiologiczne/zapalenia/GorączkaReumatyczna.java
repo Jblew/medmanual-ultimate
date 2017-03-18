@@ -26,12 +26,13 @@ public class GorączkaReumatyczna extends Choroba implements ChorobaAutoimmunolo
 	}
 
 	@Override
-	public String mechanizm() {
+	public String mechanizmNiszczenia() {
 		return "Zapalenie, aktywacja makrofagów";
 	}
 
 	@Override
-	public Stan[] maKomponenty() {
-		return array(NadwrażliwośćTypu2ZależnaOdPrzeciwciał.NadwrażliwośćTypu2ZależnaOdPrzeciwciał);
+	public Stan[] przyczyny() {
+		return array(new NadwrażliwośćTypu2ZależnaOdPrzeciwciał(docelowyAntygen(), mechanizmNiszczenia()));
 	}
+
 }

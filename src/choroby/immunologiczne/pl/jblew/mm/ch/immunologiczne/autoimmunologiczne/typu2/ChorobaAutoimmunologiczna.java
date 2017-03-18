@@ -11,7 +11,7 @@ public interface ChorobaAutoimmunologiczna {
 		}
 
 		@Override
-		public String mechanizm() {
+		public String mechanizmNiszczenia() {
 			throw new NotImplementedYetException();
 		}
 
@@ -19,5 +19,5 @@ public interface ChorobaAutoimmunologiczna {
 
 	public String docelowyAntygen();
 
-	public String mechanizm();
+	public String mechanizmNiszczenia();
 }

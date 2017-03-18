@@ -1,13 +1,20 @@
 package pl.jblew.mm.ch.immunologiczne.autoimmunologiczne.typu1;
 
-import pl.jblew.mm.adnotacje.*;
-import pl.jblew.mm.dist.*;
-import static pl.jblew.mm.dist.StaticUtils.*;
+import static pl.jblew.mm.dist.StaticUtils.array;
 
-public class Anafilaksja extends NadwrażliwośćTypu1Natychmiastowa {
+import pl.jblew.mm.ch.ogólnie.Choroba;
+import pl.jblew.mm.typy.Stan;
+
+public class Anafilaksja extends Choroba {
 	public static final Anafilaksja Anafilaksja = new Anafilaksja();
 
 	protected Anafilaksja() {
-		_constructor();
 	}
+
+	@Override
+	public Stan[] przyczyny() {
+		return array(new NadwrażliwośćTypu1Natychmiastowa("Reakcja na antygeny środowiskowe",
+				"Uogólnione przemieszczanie płynu " + "do przestrzeni tkankowej: obrzęk i hipowolemia"));
+	}
+
 }
